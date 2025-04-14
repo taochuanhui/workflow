@@ -550,7 +550,7 @@ static int __parse_chunk(const void *message, size_t size,
 	return ret;
 }
 
-void http_parser_init(int is_resp, http_parser_t *parser)
+void http_parser_init_wf(int is_resp, http_parser_t *parser)
 {
 	parser->header_state = HPS_START_LINE;
 	parser->header_offset = 0;
