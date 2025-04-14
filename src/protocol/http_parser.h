@@ -63,7 +63,7 @@ extern "C"
 {
 #endif
 
-void http_parser_init(int is_resp, http_parser_t *parser);
+void http_parser_init_wf(int is_resp, http_parser_t *parser);
 int http_parser_append_message(const void *buf, size_t *n,
 							   http_parser_t *parser);
 int http_parser_get_body(const void **body, size_t *size,
