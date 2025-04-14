@@ -229,7 +229,7 @@ private:
 public:
 	HttpMessage(bool is_resp) : parser(new http_parser_t)
 	{
-		http_parser_init(is_resp, this->parser);
+		http_parser_init_wf(is_resp, this->parser);
 		INIT_LIST_HEAD(&this->output_body);
 		this->output_body_size = 0;
 		this->cur_size = 0;
